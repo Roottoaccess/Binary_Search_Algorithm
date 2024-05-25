@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.lang.Thread;
+import java.util.Arrays;
 public class Binary_Search extends Thread{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -22,6 +23,21 @@ public class Binary_Search extends Thread{
         {
             System.out.println(e);
         }
+        /* Applying the sorting here */
+        Arrays.sort(arr);
+
+        /* Printing the sorted and final elements to process further */
+        System.out.println("----AFTER SORTING THE ARRAY FOR FINAL IMPLEMENT----");
+        try{
+            for (int i : arr) {
+                System.out.print(i+" ");
+                Thread.sleep(i);
+            }
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+
         System.out.println();
         System.out.print("Enter the target value to search: ");
         int target = sc.nextInt();
