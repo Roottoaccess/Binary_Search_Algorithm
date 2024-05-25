@@ -27,6 +27,7 @@ public class Binary_Search extends Thread{
         Arrays.sort(arr);
 
         /* Printing the sorted and final elements to process further */
+        System.out.println();
         System.out.println("----AFTER SORTING THE ARRAY FOR FINAL IMPLEMENT----");
         try{
             for (int i : arr) {
@@ -54,11 +55,13 @@ public class Binary_Search extends Thread{
 
         int left = 0;
         int right = arr.length - 1;
-
+        int step_count = 0;
         while(left <= right){
+            step_count ++;
             int mid = (left + right) / 2;
 
             if(arr[mid] == target){
+                System.out.println("Step taking by binary search to complete the process: "+step_count);
                 return mid;
             }
             else if(arr[mid] < target){
@@ -67,6 +70,7 @@ public class Binary_Search extends Thread{
                 right = mid - 1;
             }
         }
+        System.out.println("Step taking by binary search to complete the process: "+step_count);
         return -1;
     }
 }
